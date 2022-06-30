@@ -37,6 +37,21 @@ public class MainMenuManager : MonoBehaviour
 
     }
 
+    public void MusicButton(string type)
+    {
+        switch(type)
+        {
+            case "On":
+                musicIsOn = false;
+                AudioListener.pause = true;
+                break;
+            case "Off":
+                musicIsOn = true;
+                AudioListener.pause = false;
+                break;
+        }
+    }
+
     public void IconMusic()
     {
         if (musicIsOn == true)
